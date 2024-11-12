@@ -80,7 +80,7 @@ def add_permission_to_folder(folder_id, drive_service):
         permission_gmail = {
             'type': 'user',
             'role': 'writer',
-            'emailAddress': 'topsaudece2024@gmail.com'
+            'emailAddress': 'emaildeacesso@gmail.com'
         }
 
         drive_service.permissions().create(
