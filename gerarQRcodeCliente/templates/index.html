@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criação de Pasta e QR Code</title>
+</head>
+<body>
+    <h1>Criar Pasta e QR Code no Google Drive</h1>
+    <form id="form">
+        <label for="client_name">Nome do Cliente:</label>
+        <input type="text" id="client_name" name="client_name" required>
+        <br><br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+        <br><br>
+        <button type="button" onclick="createFolder()">Criar</button>
+        <button type="button" onclick="printQRCode()">Imprimir QR Code</button>
+    </form>
+
+    <script>
+        async function createFolder() {
+            const clientName = document.getElementById('client_name').value;
+            const cpf = document.getElementById('cpf').value;
+
+            const response = await fetch('/create_folder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ client_name: clientName, cpf: cpf })
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        }
+
+        async function printQRCode() {
+            const qrWindow = window.open('/download_qr');
+            qrWindow.onload = function () {
+                qrWindow.print();
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+Estrutura de Pastas
+GERARQRCODECLIENTE/
+├── app.py              # Código principal do Flask
+├── chave api.txt       # (Opcional, não é necessário para o Flask)
+├── credentials.json    # Arquivo de credenciais do Google
+├── ClienteQRcode.txt   # Nome do cliente cpfcnpj e URL 
+├── logs.txt            # logs de processo
+└── templates/
+    └── index.html      # Coloque o arquivo HTML aqui
+
+123#
+
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client qrcode[pil]
+python app.py
+
+
+Passo a Passo para Obter o Arquivo credentials.json
+Acesse o Console do Google Cloud:
+
+Acesse o Google Cloud Console.
+Certifique-se de estar conectado à conta Google onde quer configurar o projeto.
+Crie um novo projeto ou selecione um projeto já existente.
+Ative a Google Drive API:
+
+No painel do Google Cloud Console, vá para APIs e Serviços > Biblioteca.
+Pesquise por "Google Drive API" e clique em Ativar.
+Crie uma Conta de Serviço:
+
+Acesse APIs e Serviços > Credenciais no painel esquerdo.
+Clique em Criar Credenciais e selecione Conta de Serviço.
+Siga as instruções para dar um nome à conta e uma breve descrição, e clique em Concluir.
+Crie uma Chave JSON para a Conta de Serviço:
+
+Após criar a conta de serviço, encontre a nova conta criada na lista e clique nela.
+No campo Chaves, clique em Adicionar Chave e selecione Criar nova chave.
+Escolha o formato JSON e clique em Criar. Isso baixará automaticamente o arquivo credentials.json para o seu computador.
+Compartilhe o Acesso ao Google Drive:
+
+No Google Drive, você precisará compartilhar o acesso com o e-mail da conta de serviço (algo como my-service-account@my-project.iam.gserviceaccount.com).
+No Google Drive, vá até a pasta ou diretório onde quer criar novas pastas/arquivos.
+Clique com o botão direito na pasta > Compartilhar > Adicione o e-mail da conta de serviço com permissão de editor.
+Armazene o credentials.json no Diretório do Projeto:
+
+Coloque o credentials.json baixado na pasta raiz do seu projeto, onde está o código Python.
+Esse arquivo credentials.json terá a estrutura necessária para que o seu script Python se conecte ao Google Drive com as permissões apropriadas.
+
+topsaudece2024@gmail.com
