@@ -1,3 +1,11 @@
+# Problema 
+Antes, o cliente precisava ir ao consultório para fazer os exames e, depois de três dias ou mais, retornar para buscar o resultado. 
+
+# Solução 
+Com essa aplicação, o processo foi simplificado. Agora, quando o cliente realiza os exames, o atendente por meio da aplicação fornece o nome e CPF do cliente e clica em criar uma pasta remota é criada automaticamente no repositório, e um QR Code é gerado. Esse QR Code permite que o cliente acesse a pasta futuramente para consultar o resultado do exame quando estiver pronto 
+
+Dessa forma, a clínica pode acessar o mesmo repositório e adicionar os exames lá quando estiverem prontos, possibilitando que o cliente visualize o resultado sem a necessidade de retornar ao consultório.
+
 # Gerador de QR Code para Pastas de Clientes no Google Drive
 
 ## Descrição do Projeto
